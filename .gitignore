@@ -3,4 +3,10 @@ src/stylesheets/.sass-cache/
 
 # Binary builds
 grails-grass-*.zip
+
+# Grails build dir
 target/
+
+# Compass temp dirs
+.sass-cache/
+web-app/css/
