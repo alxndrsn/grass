@@ -1,2 +1,5 @@
 stacktrace.log
 src/stylesheets/.sass-cache/
+
+# Binary builds
+grails-grass-*.zip
