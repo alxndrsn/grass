@@ -28,7 +28,7 @@ compass_path = ${compass_path}
 
 		ant.exec(executable: compass_path) {
 			def relative_assets_arg = relative_assets ? "--relative-assets" : ""
-			arg(line: "--sass-dir ${sass_dir} --css-dir ${css_dir} --images-dir ${images_dir} ${relative_assets_arg} --output-style ${output_style}")
+			arg(line: "compile --sass-dir ${sass_dir} --css-dir ${css_dir} --images-dir ${images_dir} ${relative_assets_arg} --output-style ${output_style}")
 		}
 
 	}
