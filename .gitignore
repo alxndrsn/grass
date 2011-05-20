@@ -3,6 +3,7 @@ src/stylesheets/.sass-cache/
 
 # Binary builds
 grails-grass-*.zip
+grails-grass-*.zip.sha1
 
 # Grails build dir
 target/
