@@ -11,3 +11,7 @@ target/
 # Compass temp dirs
 .sass-cache/
 web-app/css/
+
+# Generated plugin file
+plugin.xml
+
