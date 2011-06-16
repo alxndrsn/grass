@@ -13,13 +13,15 @@ class CompassCompile {
 		do_check images_dir, "images_dir is not set (GrassConfig.groovy)", callback
 		do_check output_style, "output_style is not set (GrassConfig.groovy)", callback
 
-		println "Compiling sass stylesheets..."
-
-		String[] jrubyArgs = ['-S', 'compass', 'compile',
+		//org.jruby.Main.main(['-S', 'gem', 'list'] as String[])
+		String[] jrubyArgs = [
+				'-e', "require 'rubygems';gem 'compass';load Gem.bin_path('compass', 'compass')",
+				'compile',
 				'--sass-dir', sass_dir,
 				'--css-dir',  css_dir,
 				'--images-dir', images_dir,
-				'--output-style', output_style]
+				'--output-style', output_style
+				]
 		if(relative_assets) jrubyArgs << "--relative-assets"
 
 		println "Calling JRuby with args: ${jrubyArgs}"
